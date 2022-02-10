@@ -1,4 +1,4 @@
-package jp.co.bitz.Example
+package jp.co.bitz.example
 
 import org.junit.Test
 

@@ -1,4 +1,4 @@
-package jp.co.bitz.Example
+package jp.co.bitz.example
 
 import androidx.test.platform.app.InstrumentationRegistry
 import androidx.test.ext.junit.runners.AndroidJUnit4
