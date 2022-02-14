@@ -116,8 +116,8 @@ class BillingRepository(
     }
 
     companion object {
-        const val SKU_CONSUMABLE = "jp.co.bitz.Example.consumable_01"
-        const val SKU_NON_CONSUMABLE = "jp.co.bitz.Example.non_consumable_01"
+        const val SKU_CONSUMABLE = "jp.co.bitz.Example.Consumable01"
+        const val SKU_NON_CONSUMABLE = "jp.co.bitz.Example.Consumable02"
         const val SKU_SUBSCRIPTION_01 = "jp.co.bitz.Example.renewable_subscription_01"
         const val SKU_SUBSCRIPTION_02 = "jp.co.bitz.Example.renewable_subscription_02"
         val TAG = BillingRepository::class.simpleName

@@ -167,7 +167,7 @@ class BillingDataSource private constructor(
 
     /**
      * 商品名を返す.
-     * @param 商品のsku.
+     * @param sku 商品識別子.
      * @return 商品名.
      */
     fun getSkuTitle(sku: String): Flow<String> {

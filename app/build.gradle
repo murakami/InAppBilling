@@ -13,6 +13,8 @@ android {
         versionCode 1
         versionName "1.0"
 
+        buildConfigField("String", "BASE64_ENCODED_PUBLIC_KEY", "\"" + BASE64_ENCODED_PUBLIC_KEY + "\"")
+
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
     }
 
@@ -28,6 +30,9 @@ android {
     }
     kotlinOptions {
         jvmTarget = '1.8'
+    }
+    viewBinding {
+        enabled = true
     }
 }
 
