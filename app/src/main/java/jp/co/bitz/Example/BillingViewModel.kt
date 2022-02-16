@@ -19,6 +19,9 @@ class BillingViewModel(private val billingRepository: BillingRepository) : ViewM
     val messages: LiveData<String>
         get() = billingRepository.messages.asLiveData()
 
+    val debugWrite: LiveData<String>
+        get() = billingRepository.debugWrite.asLiveData()
+
     val isNonConsumable: LiveData<Boolean>
         get() = billingRepository.isPurchased(BillingRepository.SKU_NON_CONSUMABLE).asLiveData()
 
@@ -62,6 +65,12 @@ class BillingViewModel(private val billingRepository: BillingRepository) : ViewM
     fun sendMessage(message: String) {
         viewModelScope.launch {
             billingRepository.sendMessage(message)
+        }
+    }
+
+    fun sendDebugWrite(message: String) {
+        viewModelScope.launch {
+            billingRepository.sendDebugWrite(message)
         }
     }
 

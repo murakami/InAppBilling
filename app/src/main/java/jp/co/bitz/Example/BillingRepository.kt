@@ -16,6 +16,7 @@ class BillingRepository(
     private val defaultScope: CoroutineScope
 ) {
     private val exampleMessages: MutableSharedFlow<String> = MutableSharedFlow()
+    private val exampleDebugWrite: MutableSharedFlow<String> = MutableSharedFlow()
 
     /**
      * 購入フローからのメッセージを送信する.
@@ -104,6 +105,13 @@ class BillingRepository(
 
     suspend fun sendMessage(msg: String) {
         exampleMessages.emit(msg)
+    }
+
+    val debugWrite: Flow<String>
+        get() = exampleDebugWrite
+
+    suspend fun sendDebugWrite(msg: String) {
+        exampleDebugWrite.emit(msg)
     }
 
     val billingFlowInProcess: Flow<Boolean>
